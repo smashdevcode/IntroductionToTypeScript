@@ -96,6 +96,12 @@ In order to keep the focus on TypeScript, the following choices were made:
 * No SPA framework
 * No build process
 
+## Walkthrough of the Code
+
+What could be better?
+
+* All of the code is in the global namespace
+
 # Demos
 
 ## Agenda

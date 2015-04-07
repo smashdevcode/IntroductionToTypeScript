@@ -5,10 +5,20 @@
 Demo App
 
 
+Setup basic project list
+Setup basic add/edit project
 
-Use Knockout???
+Get this working... then think about how this could be converted to TS
+  What features can I highlight???
+  What features can't I highlight??? What code would I need to add to do so???
+
+Start making detailed notes on how to do the migration
+
+Build in a couple of bugs that will be discovered when migrating to TS
+
+
+
 Use Toastr???
-Use Bootstrap???
 
 
 
