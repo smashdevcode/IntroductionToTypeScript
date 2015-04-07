@@ -6,13 +6,13 @@ var ProjectsViewModel = function() {
     self.currentView = ko.observable('Projects');
     self.editTitle = ko.observable();
     self.projects = ko.observableArray(api.getProjects());
-    self.currentProject = ko.observable(getNewProject());
+    self.currentProject = ko.observable(getProjectViewModel());
 
     self.addProject = function () {
-        var project = getNewProject();
+        var projectViewModel = getProjectViewModel();
 
-        // create an observable version of the project object
-        self.currentProject(ko.mapping.fromJS(project));
+        // set the current project
+        self.currentProject(projectViewModel);
 
         // set the edit title
         self.editTitle('Add Project');
@@ -21,10 +21,10 @@ var ProjectsViewModel = function() {
     };
 
     self.editProject = function (project) {
-        var currentProject = ko.mapping.fromJS(project);
+        var projectViewModel = getProjectViewModel(project);
 
         // create an observable version of the project object
-        self.currentProject(currentProject);
+        self.currentProject(projectViewModel);
 
         // set the edit title
         self.editTitle('Edit Project');
@@ -39,11 +39,10 @@ var ProjectsViewModel = function() {
     };
 
     self.saveProject = function () {
-        var currentProject = self.currentProject(),
-            project = ko.mapping.toJS(currentProject),
+        var currentProjectViewModel = self.currentProject(),
+            project = currentProjectViewModel.getUpdatedProject(),
             projectToUpdate = findProjectById(project.projectId),
-            projects = self.projects(),
-            maxProject = -1;
+            projects = self.projects();
 
         // if we have a project to update then replace the project in the list
         // otherwise add the project to the list
@@ -51,12 +50,8 @@ var ProjectsViewModel = function() {
             // replace the project in the list
             projects[projects.indexOf(projectToUpdate)] = project;
         } else {
-            // determine the max id value
-            maxProject = _.max(projects, function (project) {
-                return project.projectId;
-            });
-
-            project.projectId = maxProject.projectId + 1;
+            // set the project id to the next available id
+            project.projectId = getNextProjectId();
 
             projects.push(project);
         }
@@ -76,11 +71,8 @@ var ProjectsViewModel = function() {
 
     // private functions
 
-    function getNewProject() {
-        return {
-            projectId: 0,
-            name: ''
-        };
+    function getProjectViewModel(project) {
+        return new ProjectViewModel(project);
     }
 
     function findProjectById(projectId) {
@@ -93,5 +85,21 @@ var ProjectsViewModel = function() {
         }
 
         return project;
+    }
+
+    function getNextProjectId() {
+        var projects = self.projects(),
+            maxProject;
+
+        if (projects.length > 0) {
+            // determine the max id value
+            maxProject = _.max(projects, function (project) {
+                return project.projectId;
+            });
+
+            return maxProject.projectId + 1;
+        } else {
+            return 1;
+        }
     }
 };

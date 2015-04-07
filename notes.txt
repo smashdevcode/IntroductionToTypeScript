@@ -5,8 +5,12 @@
 Demo App
 
 
-Setup basic project list
-Setup basic add/edit project
+
+Remove KO mapping???
+
+
+
+
 
 Get this working... then think about how this could be converted to TS
   What features can I highlight???
@@ -18,27 +22,30 @@ Build in a couple of bugs that will be discovered when migrating to TS
 
 
 
-Use Toastr???
+Use Toastr for notifications???
+
+How to force numeric input for hours???
+  http://knockoutjs.com/documentation/extenders.html
 
 
 
-Project Tracker
 
 List of projects
-  Name
+  DONE Name
   Percent Complete
+
 Add/edit project
-  Name
+  DONE Name
   Description
-  Archive
   Total Hours
   Completed Hours
   Remaining Hours
-  Tasks
+  DONE Tasks
     Name
     Hours
     Completed
-Delete project
+
+DONE Delete project
 
 
 
