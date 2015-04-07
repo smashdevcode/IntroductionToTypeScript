@@ -6,17 +6,18 @@ Demo App
 
 
 
-Remove KO mapping???
-
-
-
-
 
 Get this working... then think about how this could be converted to TS
   What features can I highlight???
   What features can't I highlight??? What code would I need to add to do so???
 
 Start making detailed notes on how to do the migration
+
+
+
+
+
+
 
 Build in a couple of bugs that will be discovered when migrating to TS
 
@@ -26,32 +27,6 @@ Use Toastr for notifications???
 
 How to force numeric input for hours???
   http://knockoutjs.com/documentation/extenders.html
-
-
-
-
-List of projects
-  DONE Name
-  Percent Complete
-
-Add/edit project
-  DONE Name
-  Description
-  Total Hours
-  Completed Hours
-  Remaining Hours
-  DONE Tasks
-    Name
-    Hours
-    Completed
-
-DONE Delete project
-
-
-
-
-
-
 
 
 

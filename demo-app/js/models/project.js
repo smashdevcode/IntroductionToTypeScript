@@ -4,5 +4,6 @@ var Project = function () {
 
     self.projectId = 0;
     self.name = '';
+    self.description = '';
     self.tasks = [];
 };
