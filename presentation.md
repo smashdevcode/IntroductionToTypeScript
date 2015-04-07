@@ -27,6 +27,34 @@
  1. Visual Studio?
  1. Other?
 
+## Agenda
+
+* What is TypeScript?
+ * Open source project on GitHub
+* Brief History of TypeScript
+ * Launched in October 2012
+ * ng-conf Announcement
+ * Personally avoided TypeScript in order to get familiar with
+ common JS design patterns
+* What is Built in TypeScript?
+  * Asana
+  * Mozilla Flash
+  * Visual Studio Online Editor
+  * AngularJS 2.0
+* Basic TypeScript Concepts
+ * How to Compile a File
+ * Optional static typing
+ * Classes
+ * Interfaces
+ * Compiling to ES6
+* Migrating an Existing App to TypeScript
+ * No unit tests
+ * No build
+ * No module loader
+* Next Steps
+ * Slides and code on GitHub
+ * Next Meetup meetings
+
 ## What is TypeScript?
 
 Jonathan Turner at ng-conf answered that question with the following the list:
