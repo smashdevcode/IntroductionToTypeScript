@@ -1,0 +1,69 @@
+
+
+
+
+Demo App
+
+
+
+Use Knockout???
+Use Toastr???
+Use Bootstrap???
+
+
+
+Project Tracker
+
+List of projects
+  Name
+  Percent Complete
+Add/edit project
+  Name
+  Description
+  Archive
+  Total Hours
+  Completed Hours
+  Remaining Hours
+  Tasks
+    Name
+    Hours
+    Completed
+Delete project
+
+
+
+
+
+
+
+
+
+
+
+
+
+Editors
+
+  Start in VS???
+  Then move to Atom???
+
+  Should I keep it simple and just stay in one editor???
+  What do I give up if I don't use VS???
+
+
+
+Modules
+
+  AMD (Asynchronous Module Definition) - RequireJS
+  CommonJS - Browserify??? (also Node.js)
+
+  The primary differences between CommonJS and AMD are as follows:
+
+  CommonJS is synchronous in nature; AMD loads files asynchronously
+  CommonJS is primarily used on the server in conjunction with node; AMD is most useful in the browser and its most popular implementation is RequireJS.
+
+  You can configure the TS compiler to combine all compiled JS into a single file
+
+  Information on file globbing
+  	http://gruntjs.com/configuring-tasks#globbing-patterns
+  		"All most people need to know is that foo/*.js will match all files ending with .js in the foo/ subdirectory, but foo/**/*.js will match all files ending with .js in the foo/ subdirectory and all of its subdirectories."

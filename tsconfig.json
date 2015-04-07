@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false
+    },
+    "filesGlob": [
+        "./**/*.ts"
+    ],
+    "files": [
+        "./example-code/classes.ts",
+        "./example-code/compiler.ts",
+        "./example-code/external-modules/scripts/goodbye.ts",
+        "./example-code/external-modules/scripts/hello.ts",
+        "./example-code/external-modules/scripts/main.ts",
+        "./example-code/functions-callbacks.ts",
+        "./example-code/functions.ts",
+        "./example-code/inheritance.ts",
+        "./example-code/interfaces-implicit.ts",
+        "./example-code/interfaces.ts",
+        "./example-code/internal-modules/scripts/goodbye.ts",
+        "./example-code/internal-modules/scripts/hello.ts",
+        "./example-code/internal-modules/scripts/main.ts",
+        "./example-code/modules/scripts/goodbye.ts",
+        "./example-code/modules/scripts/hello.ts",
+        "./example-code/modules/scripts/main.ts",
+        "./example-code/template-strings.ts",
+        "./example-code/type-inference.ts"
+    ]
+}
