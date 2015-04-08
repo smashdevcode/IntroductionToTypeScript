@@ -7,21 +7,43 @@ Demo App
 
 
 
-Get this working... then think about how this could be converted to TS
-  What features can I highlight???
-  What features can't I highlight??? What code would I need to add to do so???
-
 Start making detailed notes on how to do the migration
 
+WebStorm
+  How do you navigate to definitions???
+  How do you find all references???
+  How do you refactor???
+
+Update the API to return promises???
+  What promises library to use???
+  Built-in browser implementation??? Q???
 
 
 
+Get this working... then think about how this could be converted to TS
+  What features can I highlight???
+    Type Definition Files
+    Classes
+    Modules
+    Debugging
+    Refactoring
+  What features can't I highlight??? What code would I need to add to do so???
+    Interfaces... sigh... how can I incorporate interfaces???
+      Define interface for the API
+      Implement twice
+      Inject into the view models
+    Arrow functions???
+    Properties
 
-
+What are the improvements that we are making along the way???
 
 Build in a couple of bugs that will be discovered when migrating to TS
 
 
+
+
+
+Add jQuery validations???
 
 Use Toastr for notifications???
 

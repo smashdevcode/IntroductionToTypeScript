@@ -3,18 +3,10 @@
 
 ## TODO
 
+1. Convert demo app to TS and write up detailed instructions
 1. Incorporate ideas from this sitepen article: [http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/](http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/)
 1. Review 1.4 features (union types, let and const keywords)
 1. Review 1.5 features
-1. Install and try out the Sublime Text plug-in
-1. Start updating COMPASS app to use TypeScript
-1. Update the Time Tracking app to use TypeScript
-1. Build sample app to use for demos
- 1. TODO list app??? Project tracking app???
- 1. Just use local storage instead of an API
- 1. Use Knockout for binding and templating
- 1. Convert an existing app to TS???
- 1. Build a new TS app from scratch???
 
 ## Questions
 
@@ -31,6 +23,8 @@
 
 * What is TypeScript?
  * Open source project on GitHub
+* What is static typing?
+ * Compare and contrast to dynamic typing
 * Brief History of TypeScript
  * Launched in October 2012
  * ng-conf Announcement
@@ -115,6 +109,10 @@ and TypeScript will just output the JavaScript as is.
  * Class, Interface
   * Fields, Constructor, Properties, Functions
 
+# Compiler Demos
+
+Demo: Show how to use the compiler from the command line
+
 # Demo App
 
 ## Project Tracker
@@ -129,6 +127,8 @@ In order to keep the focus on TypeScript, the following choices were made:
 What could be better?
 
 * All of the code is in the global namespace
+* Assumptions are being made about the data types of parameters
+* Imagine this project times a factor of 50... the problems just get worse
 
 # Demos
 
@@ -378,6 +378,10 @@ Demo: Show how you can easily rename a function across your entire application.
 * Const Enums
 * ES6 Support (ES6 output mode, let and const keyword support)
 * Template Strings [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
+
+## TypeScript 1.5 Features
+
+TODO
 
 ## TypeScript in Atom
 
