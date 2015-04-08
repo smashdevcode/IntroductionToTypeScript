@@ -1,66 +1,71 @@
 
 var ProjectsViewModel = function() {
     var self = this,
-        api = new API();
+        api = new API(),
+        projectsData;
 
     self.currentView = ko.observable('Projects');
     self.editTitle = ko.observable();
-    self.projects = ko.observableArray(api.getProjects());
-    self.currentProject = ko.observable(getProjectViewModel());
+    self.projects = ko.observableArray();
+    self.currentProject = ko.observable(new Project());
+
+    self.hasProjects = ko.computed(function () {
+        var projects = self.projects();
+
+        return projects.length > 0;
+    });
+
+    // retrieve and setup the projects
+    projectsData = api.getProjects();
+    if (projectsData) {
+        ko.utils.arrayForEach(projectsData, function (projectData) {
+            self.projects.push(new Project(projectData));
+        });
+    }
 
     self.addProject = function () {
-        var projectViewModel = getProjectViewModel();
-
-        // set the current project
-        self.currentProject(projectViewModel);
-
-        // set the edit title
+        self.currentProject(new Project());
         self.editTitle('Add Project');
-
         self.currentView('AddEditProject');
     };
 
     self.editProject = function (project) {
-        var projectViewModel = getProjectViewModel(project);
+        var projectData = project.getData();
 
-        // create an observable version of the project object
-        self.currentProject(projectViewModel);
-
-        // set the edit title
+        // create a copy of the project
+        // in order to support the ability for the user to cancel an edit
+        self.currentProject(new Project(projectData));
         self.editTitle('Edit Project');
-
         self.currentView('AddEditProject');
     };
 
     self.deleteProject = function (project) {
         self.projects.remove(project);
 
-        api.saveProjects(self.projects());
+        saveProjects();
     };
 
     self.saveProject = function () {
-        var currentProjectViewModel = self.currentProject(),
-            project = currentProjectViewModel.getUpdatedProject(),
-            projectToUpdate = findProjectById(project.projectId),
-            projects = self.projects();
+        var project = self.currentProject(),
+            projectToUpdate;
 
-        // if we have a project to update then replace the project in the list
-        // otherwise add the project to the list
-        if (projectToUpdate) {
-            // replace the project in the list
-            projects[projects.indexOf(projectToUpdate)] = project;
+        // if we have an existing project then replace the project in the list
+        // otherwise set the project id and add the project to the list
+        if (project.projectId) {
+            // find the project to update
+            projectToUpdate = findProjectById(project.projectId);
+
+            // update the data
+            projectToUpdate.setData(project.getData());
         } else {
             // set the project id to the next available id
             project.projectId = getNextProjectId();
 
-            projects.push(project);
+            // add the project to the end of the list
+            self.projects.push(project);
         }
 
-        // save the projects
-        api.saveProjects(projects);
-
-        // update the list of projects
-        self.projects(projects);
+        saveProjects();
 
         self.currentView('Projects');
     };
@@ -71,20 +76,16 @@ var ProjectsViewModel = function() {
 
     // private functions
 
-    function getProjectViewModel(project) {
-        return new ProjectViewModel(project);
-    }
+    function saveProjects() {
+        var projectData = [];
 
-    function findProjectById(projectId) {
-        var project = null;
+        // get the project data
+        ko.utils.arrayForEach(self.projects(), function (project) {
+            projectData.push(project.getData());
+        });
 
-        if (projectId) {
-            project = ko.utils.arrayFirst(self.projects(), function (project) {
-                return project.projectId === projectId;
-            });
-        }
-
-        return project;
+        // save the projects
+        api.saveProjects(projectData);
     }
 
     function getNextProjectId() {
@@ -101,5 +102,17 @@ var ProjectsViewModel = function() {
         } else {
             return 1;
         }
+    }
+
+    function findProjectById(projectId) {
+        var project = null;
+
+        if (projectId) {
+            project = ko.utils.arrayFirst(self.projects(), function (project) {
+                return project.projectId === projectId;
+            });
+        }
+
+        return project;
     }
 };

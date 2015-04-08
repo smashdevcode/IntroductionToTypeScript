@@ -1,4 +1,6 @@
 
+// TODO update to use promises
+
 var API = function () {
     var self = this;
 

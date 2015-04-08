@@ -6,25 +6,7 @@ Demo App
 
 
 
-
-In order to have control over how the data is persisted...
-  I need to be explicit in my handle of the data
-
-
-
-
-Review what the persisted data looks like
-  Task hours are represented as strings
-    To fix I'd need to extend the binding to be numeric
-
-How to force numeric input for hours???
-  http://knockoutjs.com/documentation/extenders.html
-
-Add promises to API
-
-
-
-
+Update migration notes for new app
 
 Convert the view models to classes
 
@@ -36,6 +18,10 @@ Were the union types on the IProjectTask interface necessary???
 
 
 Start making detailed notes on how to do the migration
+
+
+
+
 
 WebStorm
   How do you navigate to definitions???
