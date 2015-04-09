@@ -1,7 +1,6 @@
 
 var ProjectsViewModel = function() {
     var self = this,
-        api = new API(),
         projectsData;
 
     self.currentView = ko.observable('Projects');
