@@ -4,13 +4,16 @@
 
 
 
-!!! Update the api.js file in the demo-app project
-
 Convert the app (again) to TS
     Update migration notes for new app
     Create snapshots of the code in case something goes wrong
 
-Test the project in VS
+Put together introduction content
+    Format
+    Twitter and GitHub Accounts
+    Next Meetings
+    Future Topics
+
 
 
 
@@ -35,15 +38,10 @@ Build in a couple of bugs that will be discovered when migrating to TS
 
 
 
-Add jQuery validations???
 
-Use Toastr for notifications???
-
-
-
-
-
-
+Future features
+    Add jQuery validations???
+    Use Toastr for notifications???
 
 
 Modules

@@ -78,4 +78,3 @@ var ProjectsViewModel = (function () {
     };
     return ProjectsViewModel;
 })();
-//# sourceMappingURL=projects-view-model.js.map

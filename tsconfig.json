@@ -46,6 +46,7 @@
         "./example-code/modules/scripts/hello.ts",
         "./example-code/modules/scripts/main.ts",
         "./example-code/template-strings.ts",
-        "./example-code/type-inference.ts"
+        "./example-code/type-inference.ts",
+        "./language-overview/main.ts"
     ]
 }

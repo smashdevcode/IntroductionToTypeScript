@@ -14,4 +14,3 @@ var API = function () {
         localStorage.setItem('projects', projectsString);
     };
 };
-//# sourceMappingURL=api.js.map

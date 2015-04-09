@@ -11,17 +11,13 @@ var ProjectsViewModel = function () {
     self.currentProject = ko.observable(getProjectViewModel());
     self.addProject = function () {
         var projectViewModel = getProjectViewModel();
-        // set the current project
         self.currentProject(projectViewModel);
-        // set the edit title
         self.editTitle('Add Project');
         self.currentView('AddEditProject');
     };
     self.editProject = function (project) {
         var projectViewModel = getProjectViewModel(project);
-        // create an observable version of the project object
         self.currentProject(projectViewModel);
-        // set the edit title
         self.editTitle('Edit Project');
         self.currentView('AddEditProject');
     };
@@ -31,27 +27,20 @@ var ProjectsViewModel = function () {
     };
     self.saveProject = function () {
         var currentProjectViewModel = self.currentProject(), project = currentProjectViewModel.getUpdatedProject(), projectToUpdate = findProjectById(project.projectId), projects = self.projects();
-        // if we have a project to update then replace the project in the list
-        // otherwise add the project to the list
         if (projectToUpdate) {
-            // replace the project in the list
             projects[projects.indexOf(projectToUpdate)] = project;
         }
         else {
-            // set the project id to the next available id
             project.projectId = getNextProjectId();
             projects.push(project);
         }
-        // save the projects
         api.saveProjects(projects);
-        // update the list of projects
         self.projects(projects);
         self.currentView('Projects');
     };
     self.cancel = function () {
         self.currentView('Projects');
     };
-    // private functions
     function getProjectViewModel(project) {
         if (project === void 0) { project = null; }
         return new ProjectViewModel(project);
@@ -68,7 +57,6 @@ var ProjectsViewModel = function () {
     function getNextProjectId() {
         var projects = self.projects(), maxProject;
         if (projects.length > 0) {
-            // determine the max id value
             maxProject = _.max(projects, function (project) {
                 return project.projectId;
             });
@@ -79,4 +67,3 @@ var ProjectsViewModel = function () {
         }
     }
 };
-//# sourceMappingURL=projects-view-model.js.map

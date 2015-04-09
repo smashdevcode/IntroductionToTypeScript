@@ -36,7 +36,8 @@ var ProjectViewModel = function (project) {
     self.getProjectTotalCompletedHours = function (tasks) {
         return _.sum(tasks, function (task) {
             if (typeof task.hours === 'function') {
-                return task.completed() ? task.hours() : 0;
+                return task.completed() ?
+                    task.hours() : 0;
             }
             else {
                 return task.completed ? task.hours : 0;
@@ -69,4 +70,3 @@ var ProjectViewModel = function (project) {
         return self.getProjectTotalRemainingHours(tasks);
     });
 };
-//# sourceMappingURL=project-view-model.js.map

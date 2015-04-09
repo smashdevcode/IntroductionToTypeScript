@@ -2,4 +2,3 @@
 /// <reference path="projects-view-model.ts" />
 var viewModel = new ProjectsViewModel();
 ko.applyBindings(viewModel);
-//# sourceMappingURL=main.js.map
