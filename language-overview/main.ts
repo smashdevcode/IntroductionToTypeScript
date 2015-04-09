@@ -103,6 +103,7 @@
 // 2) Show the resulting JS
 // 3) Private members
 // 4) Show how to extend a class
+// 5) Show how classes look in ES6
 
 // class MyClass {
 //     number1: number;

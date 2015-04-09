@@ -3,18 +3,16 @@
 
 
 
-
 Convert the app (again) to TS
     Update migration notes for new app
     Create snapshots of the code in case something goes wrong
 
-Put together introduction content
-    Format
-    Twitter and GitHub Accounts
-    Next Meetings
-    Future Topics
 
 
+
+Put demo code in a folder on my desktop
+
+Update TS concepts with union types
 
 
 
