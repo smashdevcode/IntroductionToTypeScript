@@ -3,48 +3,31 @@
 
 
 
-1) Create snapshots of the code in case something goes wrong
-2) Test the project in VS
-3) Look into TSD definitions file... what is it for???
+
+!!! Update the api.js file in the demo-app project
+
+Convert the app (again) to TS
+    Update migration notes for new app
+    Create snapshots of the code in case something goes wrong
+
+Test the project in VS
+
 
 
 
 
 
 Demo App
+    Switch to using enum for current view???
 
-Switch to using enum for current view???
-
-
-
-
-
-
-Update migration notes for new app
-
-!!! Update the api.js file in the demo-app project
-
-
-
-
-
-
-Get this working... then think about how this could be converted to TS
-  What features can I highlight???
+Features to highlight
     Type Definition Files
     Classes
     Modules
     Debugging
     Refactoring
-  What features can't I highlight??? What code would I need to add to do so???
-    Interfaces... sigh... how can I incorporate interfaces???
-      Define interface for the API
-      Implement twice
-      Inject into the view models
-    Arrow functions???
-    Properties
-
-What are the improvements that we are making along the way???
+    Interfaces
+    Arrow Functions
 
 Build in a couple of bugs that will be discovered when migrating to TS
 
@@ -60,16 +43,6 @@ Use Toastr for notifications???
 
 
 
-
-
-
-Editors
-
-  Start in VS???
-  Then move to Atom???
-
-  Should I keep it simple and just stay in one editor???
-  What do I give up if I don't use VS???
 
 
 

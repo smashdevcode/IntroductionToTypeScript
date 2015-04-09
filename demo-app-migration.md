@@ -226,4 +226,8 @@ the Knockout bindings need to be updated like this:
 data-bind="click: currentProject().addTask.bind(currentProject())"
 ```
 
+## Convert the View Model Function to a Class
+
+Convert the ProjectsViewModel function to a class.
+
 ## Add Internal Modules???
