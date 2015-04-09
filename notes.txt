@@ -2,38 +2,30 @@
 
 
 
+
+1) Create snapshots of the code in case something goes wrong
+2) Test the project in VS
+3) Look into TSD definitions file... what is it for???
+
+
+
+
+
 Demo App
+
+Switch to using enum for current view???
+
+
+
 
 
 
 Update migration notes for new app
 
-Convert the view models to classes
-
-Add types for every function
-
-Were the union types on the IProjectTask interface necessary???
-  They don't work too well because there aren't really any properties in common
+!!! Update the api.js file in the demo-app project
 
 
 
-Start making detailed notes on how to do the migration
-
-
-
-
-
-WebStorm
-  How do you navigate to definitions???
-  How do you find all references???
-  How do you refactor???
-
-Update the API to return promises???
-  What promises library to use???
-  Built-in browser implementation??? Q???
-
-Switch to VS???
-  Try converting the app using VS???
 
 
 

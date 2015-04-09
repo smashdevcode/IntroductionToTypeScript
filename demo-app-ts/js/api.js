@@ -1,8 +1,11 @@
 
-var API = function () {
-    var self = this;
+var api = (function () {
+    return {
+        getProjects: getProjects,
+        saveProjects: saveProjects
+    };
 
-    self.getProjects = function () {
+    function getProjects() {
         var projectsString = localStorage.getItem('projects');
 
         if (projectsString) {
@@ -12,9 +15,9 @@ var API = function () {
         }
     };
 
-    self.saveProjects = function (projects) {
+    function saveProjects(projects) {
         var projectsString = JSON.stringify(projects);
 
         localStorage.setItem('projects', projectsString);
     };
-};
+})();

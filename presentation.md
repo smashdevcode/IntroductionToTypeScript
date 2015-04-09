@@ -1,36 +1,30 @@
 
 # Introduction to TypeScript
 
-## TODO
-
-1. Convert demo app to TS and write up detailed instructions
-1. Incorporate ideas from this sitepen article: [http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/](http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/)
-1. Review 1.4 features (union types, let and const keywords)
-1. Review 1.5 features
+---
 
 ## Questions
 
 1. Who is familiar with TypeScript?
 1. Who has used TypeScript on a project?
 1. What editor(s) do you use?
- 1. Sublime Text?
- 1. Atom?
- 1. WebStorm?
- 1. Visual Studio?
- 1. Other?
+
+---
 
 ## Agenda
 
+TODO update slide content as needed
+
 * What is TypeScript?
  * Open source project on GitHub
-* What is static typing?
- * Compare and contrast to dynamic typing
 * Brief History of TypeScript
  * Launched in October 2012
  * ng-conf Announcement
  * Personally avoided TypeScript in order to get familiar with
  common JS design patterns
-* What is Built in TypeScript?
+* What is static typing?
+ * Compare and contrast to dynamic typing
+* What is Built Using TypeScript?
   * Asana
   * Mozilla Flash
   * Visual Studio Online Editor
@@ -49,6 +43,8 @@
  * Slides and code on GitHub
  * Next Meetup meetings
 
+---
+
 ## What is TypeScript?
 
 Jonathan Turner at ng-conf answered that question with the following the list:
@@ -57,6 +53,8 @@ Jonathan Turner at ng-conf answered that question with the following the list:
 * Optional type system
 * Features from the future (ES6, ES7)
 
+---
+
 ## Key TypeScript Features
 
 * Supports standard JavaScript code
@@ -64,30 +62,40 @@ Jonathan Turner at ng-conf answered that question with the following the list:
 * Encapsulation through classes and modules
 * Interfaces
 * Anonymous functions
-* Richer tooling support including static checking, symbol-based navigation,
-statement completion, and code refactoring
+
+---
+
+## Key TypeScript Features
+
+* Richer tooling support including static checking, symbol-based navigation, statement completion, and code refactoring
+
+---
 
 ## TypeScript Compiler and Tooling
 
-Not just a command line compiler, but an API that provides a collection of
-services that allows tooling support to be developed.
+Not just a command line compiler, but an API that provides a collection of services that allows tooling support to be developed.
+
+---
+
+## Tooling
 
 TypeScript support is available in:
 
 * Sublime Text
-* Atom [https://atom.io/packages/atom-typescript](https://atom.io/packages/atom-typescript)
-* Emacs
-* Vi
+* Atom - [https://atom.io/packages/atom-typescript](https://atom.io/packages/atom-typescript)
 * WebStorm
 * Visual Studio
+* And others (like Emacs and Vi)
+
+---
 
 ## TypeScript Syntax
 
-Since TypeScript is a superset of JavaScript, the syntax is the same as
-JavaScript. You can take raw JavaScript code, paste it into a TypeScript file,
-and TypeScript will just output the JavaScript as is.
+Since TypeScript is a superset of JavaScript, the syntax is the same as JavaScript. You can take raw JavaScript code, paste it into a TypeScript file, and TypeScript will just output the JavaScript as is.
 
-## Keywords and Operators
+---
+
+<!-- ## Keywords and Operators
 
 * class
 * constructor
@@ -95,6 +103,11 @@ and TypeScript will just output the JavaScript as is.
 * extends
 * implements
 * imports
+
+---
+
+## Keywords and Operators
+
 * interface
 * module
 * public/private
@@ -103,17 +116,25 @@ and TypeScript will just output the JavaScript as is.
 * <typeName>
 * : - separator
 
+---
+
 ## Code Hierarchy
 
 * Module
  * Class, Interface
   * Fields, Constructor, Properties, Functions
 
+--- -->
+
 # Compiler Demos
 
-Demo: Show how to use the compiler from the command line
+^ Demo: Show how to use the compiler from the command line
+
+---
 
 # Demo App
+
+---
 
 ## Project Tracker
 
@@ -121,6 +142,10 @@ In order to keep the focus on TypeScript, the following choices were made:
 
 * No SPA framework
 * No build process
+* No unit tests
+* No form validation
+
+---
 
 ## Walkthrough of the Code
 
@@ -129,6 +154,56 @@ What could be better?
 * All of the code is in the global namespace
 * Assumptions are being made about the data types of parameters
 * Imagine this project times a factor of 50... the problems just get worse
+
+---
+
+## TypeScript 1.4 Features
+
+* Union Types
+* Type Aliases
+* Const Enums
+* ES6 Support (ES6 output mode, let and const keyword support)
+* Template Strings
+
+^ [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
+
+^ [http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx](http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx)
+
+---
+
+## TypeScript 1.5 Features
+
+TODO
+
+---
+
+## TypeScript in Atom
+
+* Support for projects with tsconfig.json
+ * filesGlob
+ * F6 build
+
+TODO
+
+---
+
+## TypeScript in Sublime Text
+
+TODO
+
+---
+
+## TypeScript in WebStorm
+
+TODO
+
+---
+
+## TypeScript in Visual Studio
+
+TODO
+
+<!--
 
 # Demos
 
@@ -369,36 +444,11 @@ TypeScript enables reliable refactoring of your code base.
 
 Demo: Show how you can easily rename a function across your entire application.
 
-## TypeScript 1.4 Features
+## TODO
 
-[http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx](http://blogs.msdn.com/b/typescript/archive/2015/01/16/announcing-typescript-1-4.aspx)
+1. Convert demo app to TS and write up detailed instructions
+1. Incorporate ideas from this sitepen article: [http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/](http://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/)
+1. Review 1.4 features (union types, let and const keywords)
+1. Review 1.5 features
 
-* Union Types
-* Type Aliases
-* Const Enums
-* ES6 Support (ES6 output mode, let and const keyword support)
-* Template Strings [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
-
-## TypeScript 1.5 Features
-
-TODO
-
-## TypeScript in Atom
-
-* Support for projects with tsconfig.json
- * filesGlob
- * F6 build
-
-TODO
-
-## TypeScript in Sublime Text
-
-TODO
-
-## TypeScript in WebStorm
-
-TODO
-
-## TypeScript in Visual Studio
-
-TODO
+-->

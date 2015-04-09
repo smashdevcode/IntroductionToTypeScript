@@ -49,10 +49,12 @@
                     <td data-bind="text: percentComplete"></td>
                     <td>
                         <div class="pull-right">
-                            <button class="btn btn-success btn-sm" data-bind="click: $root.editProject">
+                            <button class="btn btn-success btn-sm"
+                                    data-bind="click: $root.editProject.bind($root)">
                                 <span class="glyphicon glyphicon-pencil"></span> Edit
                             </button>
-                            <button class="btn btn-danger btn-sm" data-bind="click: $root.deleteProject">
+                            <button class="btn btn-danger btn-sm"
+                                    data-bind="click: $root.deleteProject.bind($root)">
                                 <span class="glyphicon glyphicon-trash"></span> Delete
                             </button>
                         </div>
@@ -159,7 +161,8 @@
                                 </td>
                                 <td>
                                     <div class="pull-right">
-                                        <button class="btn btn-danger btn-sm" data-bind="click: $root.currentProject().deleteTask">
+                                        <button class="btn btn-danger btn-sm"
+                                                data-bind="click: $root.currentProject().deleteTask.bind($root.currentProject())">
                                             <span class="glyphicon glyphicon-trash"></span> Delete
                                         </button>
                                     </div>
@@ -173,7 +176,8 @@
                     </div>
 
                     <div class="pull-right">
-                        <button class="btn btn-success btn-sm" data-bind="click: currentProject().addTask">
+                        <button class="btn btn-success btn-sm"
+                                data-bind="click: currentProject().addTask.bind(currentProject())">
                             <span class="glyphicon glyphicon-plus"></span> Add Task
                         </button>
                     </div>
