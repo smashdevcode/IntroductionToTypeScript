@@ -4,8 +4,6 @@
 
 
 
-Update TS concepts with union types
-
 Check in presentation material and code into GitHub repo
 
 
