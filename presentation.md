@@ -13,7 +13,7 @@
 
 # Agenda
 
-* TypeScript Overview (6 slides)
+* TypeScript Overview (7 slides)
 * Language Overview (demo)
 * Break (5 minutes)
 * Converting an Existing App (demo)
@@ -72,6 +72,14 @@
 * Symbol-based navigation
 * Statement completion
 * Code refactoring
+
+---
+
+# Why Do We Care?
+
+* TypeScript is just a tool... use it, or don't
+* Increased productivity = happier developers
+* Higher quality solutions = happier users
 
 ---
 

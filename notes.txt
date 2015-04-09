@@ -3,16 +3,11 @@
 
 
 
-Convert the app (again) to TS
-    Update migration notes for new app
-    Create snapshots of the code in case something goes wrong
-
-
-
-
-Put demo code in a folder on my desktop
 
 Update TS concepts with union types
+
+Check in presentation material and code into GitHub repo
+
 
 
 
