@@ -4,12 +4,6 @@
 
 
 
-Check in presentation material and code into GitHub repo
-
-
-
-
-
 
 Demo App
     Switch to using enum for current view???
